@@ -31,7 +31,7 @@ namespace sim_influxdb
                 int interval = ReadConfig("interval", 1000);
                 int count = ReadConfig("count", 2000);
 
-                Console.WriteLine("URL = {0}\ncount = {1}\ninterval = {2}", dbURL, count, interval);
+                Console.WriteLine("URL = {0}\norg = {1}\nbucket = {2}\ncount = {3}\ninterval = {4}", dbURL, org, bucket, count, interval);
 
                 using var client = new InfluxDBClient(dbURL, token);
 
